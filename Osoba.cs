@@ -1,34 +1,26 @@
-﻿using System;
-using Internship_3_OOP_Calendar;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Diagnostics.Tracing;
 
-namespace Internship_3_OOP_Calendar.Classes
+namespace Internship_3_OOP_Calendar_2._0.Classes
 {
-     class Event
+    public class Osoba
+
     {
-        public Guid id;
-        public string naziv;
-        public string lokacija;
-        public DateTime datumPocetka;
-        public DateTime datumKraja;
-        public string email;
+        public string ime;
+        public string prezime;
+        public string email { get; }
+        public Dictionary<Guid, bool> prisutnost = new Dictionary<Guid, bool>();
 
-        public Event(Guid aId, string aNaziv, string aLokacija, DateTime aDatumPocetka, DateTime aDatumKraja, string aEmail)
+        public Osoba(string aIme, string aPrezime, string aEmail, Dictionary<Guid, bool> aPrisutnost)
         {
-            id = aId;
-            naziv = aNaziv; 
-            lokacija = aLokacija;
-            datumPocetka = aDatumPocetka;
-            datumKraja = aDatumKraja;
-            email = aEmail; 
-
+            ime = aIme;
+            prezime = aPrezime;
+            email = aEmail;
+            prisutnost = aPrisutnost;
         }
-
-        
-
     }
 }
+
